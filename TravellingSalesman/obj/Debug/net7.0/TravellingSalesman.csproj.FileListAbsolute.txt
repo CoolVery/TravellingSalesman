@@ -1,0 +1,14 @@
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\bin\Debug\net7.0\TravellingSalesman.exe
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\bin\Debug\net7.0\TravellingSalesman.deps.json
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\bin\Debug\net7.0\TravellingSalesman.runtimeconfig.json
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\bin\Debug\net7.0\TravellingSalesman.dll
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\bin\Debug\net7.0\TravellingSalesman.pdb
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.AssemblyInfoInputs.cache
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.AssemblyInfo.cs
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.csproj.CoreCompileInputs.cache
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.dll
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\refint\TravellingSalesman.dll
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.pdb
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\TravellingSalesman.genruntimeconfig.cache
+C:\Users\zepli\source\repos\TravellingSalesman\TravellingSalesman\obj\Debug\net7.0\ref\TravellingSalesman.dll
