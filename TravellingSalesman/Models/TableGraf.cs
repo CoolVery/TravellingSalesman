@@ -8,9 +8,11 @@ namespace TravellingSalesman.Models
 {
     internal class TableGraf
     {
-        static int[,] arrayTableGraf = { { 0, 1, 2, 3, 4}, { 1, -1, 2, 1, 5 }, { 2, 3, -1, 2, 1}, { 3, 4, 1, -1, 2}, { 4, 5, 3, 3, -1} };
+        static int m = int.MaxValue;
+        static int[,] arrayTableGraf = { { 0, 1, 2, 3, 4}, { 1, m, 2, 1, 5 }, { 2, 3, m, 2, 1}, { 3, 4, 1, m, 2}, { 4, 5, 3, 3, m } };
 
         public static int[,] ArrayTableGraf { get => arrayTableGraf; set => arrayTableGraf = value; }
+        public static int M { get => m; set => m = value; }
 
         public static void PrintTable()
         {

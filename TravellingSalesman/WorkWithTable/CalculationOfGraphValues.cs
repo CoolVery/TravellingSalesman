@@ -11,21 +11,32 @@ namespace TravellingSalesman.WorkWithTable
     {
         public static int[] CountMaximumZeroRating()
         {
-            int[,] evaluationOfZeroCells = ZeroCellEvaluation();
             int maxElem = 0;
             int indexRowMax = 0;
             int indexColumnMax = 0;
-            for (int i = 0; i < evaluationOfZeroCells.GetLength(0); i++)
+            if (TableGraf.ArrayTableGraf.GetLength(0) != 2)
             {
-                for (int j = 0; j < evaluationOfZeroCells.GetLength(1); j++)
+                int[,] evaluationOfZeroCells = ZeroCellEvaluation();
+
+                for (int i = 0; i < evaluationOfZeroCells.GetLength(0); i++)
                 {
-                    if (evaluationOfZeroCells[i, j] > maxElem)
+                    for (int j = 0; j < evaluationOfZeroCells.GetLength(1); j++)
                     {
-                        maxElem = evaluationOfZeroCells[i, j];
-                        indexRowMax = i;
-                        indexColumnMax = j;
+                        if (evaluationOfZeroCells[i, j] > maxElem)
+                        {
+                            maxElem = evaluationOfZeroCells[i, j];
+                            indexRowMax = i;
+                            indexColumnMax = j;
+                        }
                     }
                 }
+            }
+            else
+            {
+                maxElem = 0;
+                indexRowMax = 1;
+                indexColumnMax = 1;
+
             }
             return new int[] { maxElem, indexRowMax, indexColumnMax };
         }
@@ -64,7 +75,16 @@ namespace TravellingSalesman.WorkWithTable
                 if (TableGraf.ArrayTableGraf[i, indexColumn] == -1 || i == indexRow) continue;
                 column.Add(TableGraf.ArrayTableGraf[i, indexColumn]);
             }
+            if (row.Min() == TableGraf.M && column.Min() == TableGraf.M)
+            {
+                return TableGraf.M;
+            }
             return (int)(row.Min() + column.Min());
+        }
+        public static int CountRootWithoutGraf(int root, int maxZeroCall)
+        {
+            if(maxZeroCall == TableGraf.M) return TableGraf.M;
+            else return root + maxZeroCall;
         }
     }
 }

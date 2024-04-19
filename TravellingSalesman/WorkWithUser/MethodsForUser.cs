@@ -41,13 +41,34 @@ namespace TravellingSalesman.WorkWithUser
         {
             int sumRowReductions = Reductions.StringReduction();
             int sumColumnReductions = Reductions.ColumnReduction();
-            int root = sumColumnReductions + sumRowReductions;
-            WriteFile.WriteTableGrafInFile(false);
+            int startRoot = sumColumnReductions + sumRowReductions;
             int[] arrayMaxZeroCellAndIndexs = CalculationOfGraphValues.CountMaximumZeroRating();
-            OutputGraf.PrintGraf(root);
+            WriteFile.WriteTableGrafInFile(arrayMaxZeroCellAndIndexs[1], arrayMaxZeroCellAndIndexs[2], false);
+            OutputGraf.PrintGraf(startRoot);
             while (Checks.ChecksLenghtTable())
             {
                 ReadFile.ReadTableGraf();
+                sumRowReductions = Reductions.StringReduction();
+                sumColumnReductions = Reductions.ColumnReduction();
+                int newRoot = startRoot + sumColumnReductions + sumRowReductions;
+                int newRootWithoutGraf = CalculationOfGraphValues.CountRootWithoutGraf(startRoot, arrayMaxZeroCellAndIndexs[0]);
+
+                arrayMaxZeroCellAndIndexs = CalculationOfGraphValues.CountMaximumZeroRating();
+                WriteFile.WriteTableGrafInFile(arrayMaxZeroCellAndIndexs[1], arrayMaxZeroCellAndIndexs[2], true);
+
+                if (newRoot < newRootWithoutGraf)
+                {
+                    OutputGraf.PrintWithGraf(newRoot, arrayMaxZeroCellAndIndexs);
+                    startRoot = newRoot;
+                    
+                }
+                else if (newRootWithoutGraf < newRoot) 
+                {
+                    OutputGraf.PrintWithoutGraf(newRoot, arrayMaxZeroCellAndIndexs);
+                    startRoot = newRootWithoutGraf;
+                   
+                }
+               
             }
         }
     }

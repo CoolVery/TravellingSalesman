@@ -22,8 +22,8 @@ namespace TravellingSalesman.WorkWithTable
                 //Fills the sheet with row values except -1
                 for (int j = 1; j < TableGraf.ArrayTableGraf.GetLength(1); j++)
                 {
-                    if (TableGraf.ArrayTableGraf[i, j] == -1) continue;
-                    else listRowValue.Add(TableGraf.ArrayTableGraf[i, j]);
+                    //if (TableGraf.ArrayTableGraf[i, j] == -1) continue;
+                    listRowValue.Add(TableGraf.ArrayTableGraf[i, j]);
                 }
                 //Finds and adds the minimum value to the string reduction list
                 int minValue = listRowValue.Min();
@@ -31,7 +31,7 @@ namespace TravellingSalesman.WorkWithTable
                 //Subtracts the minimum value from each row
                 for (int j = 1; j < TableGraf.ArrayTableGraf.GetLength(1); j++)
                 {
-                    if (TableGraf.ArrayTableGraf[i, j] == -1) continue;
+                    if (TableGraf.ArrayTableGraf[i, j] == TableGraf.M) continue;
                     TableGraf.ArrayTableGraf[i, j] -= minValue;
                 }
             }
@@ -50,8 +50,8 @@ namespace TravellingSalesman.WorkWithTable
                 //Fills the sheet with column values except -1
                 for (int j = 1; j < TableGraf.ArrayTableGraf.GetLength(0); j++)
                 {
-                    if (TableGraf.ArrayTableGraf[j, i] == -1) continue;
-                    else listColumnValue.Add(TableGraf.ArrayTableGraf[j, i]);
+                    //if (TableGraf.ArrayTableGraf[j, i] == -1) continue;
+                     listColumnValue.Add(TableGraf.ArrayTableGraf[j, i]);
                 }
                 //Finds and adds the minimum value to the string reduction list
                 int minValue = listColumnValue.Min();
@@ -59,7 +59,7 @@ namespace TravellingSalesman.WorkWithTable
                 //Subtracts the minimum value from each column
                 for (int j = 1; j < TableGraf.ArrayTableGraf.GetLength(0); j++)
                 {
-                    if (TableGraf.ArrayTableGraf[j, i] == -1) continue;
+                    if (TableGraf.ArrayTableGraf[j, i] == TableGraf.M) continue;
                     TableGraf.ArrayTableGraf[j, i] -= minValue;
                 }
             }
